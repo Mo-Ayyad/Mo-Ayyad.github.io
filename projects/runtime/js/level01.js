@@ -88,6 +88,41 @@ var level01 = function (window) {
         sawBladeHitZone.addChild(obstacleImage);
 
 
+        var hitZoneSize = 25;
+        var damageFromObstacle = 10;
+        var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle)
+        sawBladeHitZone.x = 5100;
+        sawBladeHitZone.y = 240;
+        game.addGameItem(sawBladeHitZone);
+        var obstacleImage = draw.bitmap("img/sawblade.png");
+        obstacleImage.x = -25;
+        obstacleImage.y = -25;
+        sawBladeHitZone.addChild(obstacleImage);
+
+        var hitZoneSize = 25;
+        var damageFromObstacle = 10;
+        var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle)
+        sawBladeHitZone.x = 5400;
+        sawBladeHitZone.y = 320;
+        game.addGameItem(sawBladeHitZone);
+        var obstacleImage = draw.bitmap("img/sawblade.png");
+        obstacleImage.x = -25;
+        obstacleImage.y = -25;
+        sawBladeHitZone.addChild(obstacleImage);
+
+        var hitZoneSize = 25;
+        var damageFromObstacle = 10;
+        var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle)
+        sawBladeHitZone.x = 4700;
+        sawBladeHitZone.y = 240;
+        game.addGameItem(sawBladeHitZone);
+        var obstacleImage = draw.bitmap("img/sawblade.png");
+        obstacleImage.x = -25;
+        obstacleImage.y = -25;
+        sawBladeHitZone.addChild(obstacleImage);
+
+
+
         function createBball(x, y) {
             var hitZoneSize = 25;
             var damageFromObstacle = 10;
@@ -105,6 +140,9 @@ var level01 = function (window) {
         createBball(400, 240);
         createBball(750, 320);
         createBball(1000, 240);
+        createBball(3400, 240);
+        createBball(3750, 320);
+        createBball(4000, 240);
 
         function createEnemy(x, y) {
             var enemy = game.createGameItem("enemy", 25);
@@ -129,6 +167,10 @@ var level01 = function (window) {
         createEnemy(2000, groundY - 10);
         createEnemy(800, groundY - 120);
         createEnemy(1500, groundY - 50);
+        createEnemy(6000, groundY - 10);
+        createEnemy(4800, groundY - 120);
+        createEnemy(5500, groundY - 50);
+
 
         function createReward(x, y) {
             var reward = game.createGameItem("reward", 25);
@@ -152,7 +194,7 @@ var level01 = function (window) {
         }
 
         createReward(2500, groundY - 50);
-
+        createReward(6500, groundY - 50);
 
 
 
