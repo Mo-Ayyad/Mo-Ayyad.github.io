@@ -31,7 +31,7 @@ var level01 = function (window) {
             ]
         };
 
-        for (var i = 0; i <= levelData.gameItems.length; i++) {
+        for (var i = 0; i < levelData.gameItems.length; i++) {
             var gameItem = levelData.gameItems[i];
             if (gameItem.type === "sawBlade") {
                 createSawBlade(gameItem.x, gameItem.y);
