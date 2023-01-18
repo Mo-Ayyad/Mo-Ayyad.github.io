@@ -34,13 +34,13 @@ var level01 = function (window) {
         for (var i = 0; i < levelData.gameItems.length; i++) {
             var gameItem = levelData.gameItems[i];
             if (gameItem.type === "sawBlade") {
-                createSawBlade(gameItem.x, gameItem.y);
+                createSawBlade(levelData.gameItems[i].x, levelData.gameItems[i].y);
             } else if (gameItem.type === "bBall") {
-                createBBall(gameItem.x, gameItem.y);
+                createBBall(levelData.gameItems[i].x, levelData.gameItems[i].y);
             } else if (gameItem.type === "enemy") {
-                createEnemy(gameItem.x, gameItem.y);
+                createEnemy(levelData.gameItems[i].x, levelData.gameItems[i].y);
             } else if (gameItem.type === "reward") {
-                createReward(gameItem.x, gameItem.y);
+                createReward(levelData.gameItems[i].x, levelData.gameItems[i].y);
             }
         }
 
@@ -202,11 +202,11 @@ var level01 = function (window) {
         // DO NOT EDIT CODE BELOW HERE
     }
 
-
-    // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-    if ((typeof process !== 'undefined') &&
-        (typeof process.versions.node !== 'undefined')) {
-        // here, export any references you need for tests //
-        module.exports = level01;
-    };
+};
+// DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
+if ((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
+    // here, export any references you need for tests //
+    module.exports = level01;
 }
+
