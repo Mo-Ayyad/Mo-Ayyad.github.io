@@ -21,10 +21,9 @@ function resetAndRender() {
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
 
-  applyFilter(reddify);
-  applyFilter(decreaseBlue);
-  applyFilter(increaseGreenByBlue);
-
+  applyFilterNoBackground(reddify);
+  // applyFilterNoBackground(decreaseBlue);
+  // applyFilterNoBackground(increaseGreenByBlue);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -74,17 +73,20 @@ function applyFilter(filterFunction) {
 }
 
 
-debugger;
 // TODO 7: Create the applyFilterNoBackground function
-function applyFilterNoBackground(filterFunction, image) {
-  var backgroundPixel = image[0][0];
-  for (var row = 0; row < image.length; row++) {
-    for (var col = 0; col < image[row].length; col++) {
-      var currentPixel = image[row][col];
-      filterFunction(rgbNumbers);
-      if (currentPixel !== backgroundPixel) {
-        rgbString = rgbArrayToString(rgbNumbers);
-        image[row][col] = rgbString;
+function applyFilterNoBackground(filterFunction) {
+  var backgroundColor = image[0][0];
+  for (var i = 0; i < image.length; i++) {
+    for (var j = 0; j < image[i].length; j++) {
+      var currentColor = image[i][j];
+      if (currentColor === backgroundColor) {
+      }
+      else {
+        var rgbNumbers = rgbStringToArray(currentColor);
+        filterFunction(rgbNumbers);
+        currentColor = rgbArrayToString(rgbNumbers);
+        image[i][j] = currentColor;
+
       }
     }
   }
