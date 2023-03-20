@@ -1,0 +1,21 @@
+User Story / Gameplay:
+Describe the gameplay: The gameplay of Pong involves two players controlling paddles placed on opposite sides of the screen. A ball is hit back and forth between the two paddles and the top and bottom walls until one player misses the ball. The player who misses the ball loses the point. The game ends when one player reaches 11 points.
+What are the conditions when the game begins? The game begins with both players having a score of zero and the ball in the center of the screen. The ball will move in a random direction to start the game.
+Does the game have an end? If so, what are the conditions for when it ends? Yes, the game ends when one player reaches 11 points.
+What ifs will there be? If the ball collides with the paddle at a certain angle, then the ball will bounce off at a different angle. If the player’s paddle misses the ball, they lose a point. If the score reaches 11, the game ends. If the ball hits the sides, it bounces at an angle. Assuming that there is a timer, if it reaches zero the game ends; if it reaches zero while both players have the same number of points its a tie
+
+Visual Game Components:
+What are the visual game components? The visual game components include the paddles, the ball, the line, the score boxes for both players, and the timer if any.
+Which will be static? The score boxes for both players will be static as well as the line.
+Which will be animated? The paddles and the ball will be animated.
+What data will you need to manage each game component? For the paddles, we will need to manage their position(X, Y) and size. For the ball, we will need to manage its position(X, Y), size, and speed(X, Y). For the score boxes, we will need to manage the score for each player. For the timer, time must be managed and it must decrease. For the line, its static position must be set up. 
+
+Events / Logic:
+What events will occur in this game? Keyboard events will occur when a player moves their paddle up or down. Collision events will occur when the ball collides with a paddle or a wall.
+How do those events affect the data of the program? Keyboard events will affect the position of the paddle. Collision events will affect the position and speed of the ball.
+For each "event", write out the high-level logic of what will happen:
+Keyboard events: when a player presses the up or down arrow key, the position of their paddle will be updated accordingly.
+Collision events with paddles: when the ball collides with a paddle, its speed and direction will be adjusted based on the angle of the collision and the speed of the paddle.
+Collision events with walls: when the ball collides with the top or bottom wall, its direction will be reversed. When the ball collides with the left or right wall, the point will be scored by the opposite player, and the ball will be reset to the center of the screen with a random direction.
+Scoring events: when a player scores a point, their score will be updated, and the ball will be reset to the center of the screen with a random direction.
+Ending the game: when one player reaches 11 points, the game will end, and a winner will be declared.
