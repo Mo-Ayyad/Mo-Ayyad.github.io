@@ -8,13 +8,13 @@ Visual Game Components:
 What are the visual game components? The visual game components include the paddles, the ball, the line, the score boxes for both players, and the timer if any.
 Which will be static? The score boxes for both players will be static as well as the line.
 Which will be animated? The paddles and the ball will be animated.
-What data will you need to manage each game component? For the paddles, we will need to manage their position(X, Y) and size. For the ball, we will need to manage its position(X, Y), size, and speed(X, Y). For the score boxes, we will need to manage the score for each player. For the timer, time must be managed and it must decrease. For the line, its static position must be set up. 
+What data will you need to manage each game component? For the paddles, we will need to manage their position(X, Y), speed(X,Y) and size. For the ball, we will need to manage its position(X, Y), size, and speed(X, Y). For the score boxes, we will need to manage the score for each player. For the timer, time must be managed and it must decrease. For the line, its static position must be set up. 
 
 Events / Logic:
 What events will occur in this game? Keyboard events will occur when a player moves their paddle up or down. Collision events will occur when the ball collides with a paddle or a wall.
 How do those events affect the data of the program? Keyboard events will affect the position of the paddle. Collision events will affect the position and speed of the ball.
 For each "event", write out the high-level logic of what will happen:
-Keyboard events: when a player presses the up or down arrow key, the position of their paddle will be updated accordingly.
+Keyboard events: when a player presses the up or down arrow key (for one paddle) and the W and S keys(fotr the other paddle), the position of their paddle will be updated accordingly.
 Collision events with paddles: when the ball collides with a paddle, its speed and direction will be adjusted based on the angle of the collision and the speed of the paddle.
 Collision events with walls: when the ball collides with the top or bottom wall, its direction will be reversed. When the ball collides with the left or right wall, the point will be scored by the opposite player, and the ball will be reset to the center of the screen with a random direction.
 Scoring events: when a player scores a point, their score will be updated, and the ball will be reset to the center of the screen with a random direction.
